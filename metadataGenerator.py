@@ -8,8 +8,8 @@ media_extension = ".png"
 rareness = ["Obsidian", "Emerald", "Ruby", "Diamond"]
 heroes = ["Reaper", "Warrior", "Sourcerer"]
 stars = [1, 2, 3]
-amount_of_combinations = 3
-amount_of_sub_combinations = 4
+amount_of_combinations = 4
+amount_of_sub_combinations = 3
 amount_of_sub_sub_combinations = 3
 counter = 0
 
@@ -22,7 +22,7 @@ for i in range(amount_of_combinations):
             base_metadata = {
 
                 "image": base_uri + str(i + 1) + str(j + 1) + str(k + 1) + media_extension,
-                "name": rareness[j] + " " + heroes[i],
+                "name": rareness[i] + " " + heroes[j],
                 "attributes": [
 
                     {
@@ -32,7 +32,7 @@ for i in range(amount_of_combinations):
 
                     {
                         "trait_type": "Heroe",
-                        "value": heroes[i]
+                        "value": heroes[j]
                     }
                 
                 ]
